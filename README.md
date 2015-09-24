@@ -38,14 +38,14 @@ Register services:
 # app/config/services.yml
 services:
     wsse.security.authentication.provider:
-        class: Alcalyn\WSSE\Security\Authentication\Provider\WsseProvider
+        class: Alcalyn\Wsse\Security\Authentication\Provider\WsseProvider
         arguments:
             - "" # User Provider
             - "%kernel.cache_dir%/security/nonces"
         public: false
 
     wsse.security.authentication.listener:
-        class: Alcalyn\WSSE\Security\Firewall\WsseListener
+        class: Alcalyn\Wsse\Security\Firewall\WsseListener
         arguments: ["@security.token_storage", "@security.authentication.manager"]
         public: false
 ```
@@ -58,7 +58,7 @@ namespace AppBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Alcalyn\WSSE\DependencyInjection\Security\Factory\WsseFactory;
+use Alcalyn\Wsse\DependencyInjection\Security\Factory\WsseFactory;
 
 class AppBundle extends Bundle
 {
