@@ -25,7 +25,7 @@ You have to register library class in your Symfony project.
 
 ### Silex
 
-See [SilexWSSE](#) project.
+See [SilexWSSE](https://github.com/alcalyn/silex-wsse) project.
 
 
 ### Symfony full stack
