@@ -1,6 +1,6 @@
 <?php
 
-namespace Alcalyn\WSSE\Security\Http\Firewall;
+namespace Alcalyn\Wsse\Security\Http\Firewall;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
@@ -8,7 +8,7 @@ use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterfac
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Http\Firewall\ListenerInterface;
-use Alcalyn\WSSE\Security\Authentication\Token\WsseUserToken;
+use Alcalyn\Wsse\Security\Authentication\Token\WsseUserToken;
 
 class WsseListener implements ListenerInterface
 {

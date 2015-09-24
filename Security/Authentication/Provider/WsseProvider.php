@@ -1,15 +1,15 @@
 <?php
 
-namespace Alcalyn\WSSE\Security\Authentication\Provider;
+namespace Alcalyn\Wsse\Security\Authentication\Provider;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\User\UserCheckerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface;
-use Alcalyn\WSSE\Security\Exception\WsseAuthenticationException;
-use Alcalyn\WSSE\Security\Authentication\Token\WsseUserToken;
-use Alcalyn\WSSE\Security\Authentication\Provider\WsseTokenValidatorInterface;
+use Alcalyn\Wsse\Security\Exception\WsseAuthenticationException;
+use Alcalyn\Wsse\Security\Authentication\Token\WsseUserToken;
+use Alcalyn\Wsse\Security\Authentication\Provider\WsseTokenValidatorInterface;
 
 class WsseProvider implements AuthenticationProviderInterface
 {

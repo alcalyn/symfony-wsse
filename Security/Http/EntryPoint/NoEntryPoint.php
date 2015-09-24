@@ -1,6 +1,6 @@
 <?php
 
-namespace Alcalyn\WSSE\Security\Http\EntryPoint;
+namespace Alcalyn\Wsse\Security\Http\EntryPoint;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Alcalyn\WSSE\Security\Authentication\Provider;
+namespace Alcalyn\Wsse\Security\Authentication\Provider;
 
 use Symfony\Component\Security\Core\Exception\NonceExpiredException;
 use Symfony\Component\Security\Core\Util\StringUtils;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Alcalyn\WSSE\Security\Authentication\Token\WsseUserToken;
+use Alcalyn\Wsse\Security\Authentication\Token\WsseUserToken;
 
 class PasswordDigestValidator implements WsseTokenValidatorInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Alcalyn\WSSE\Security\Exception;
+namespace Alcalyn\Wsse\Security\Exception;
 
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 

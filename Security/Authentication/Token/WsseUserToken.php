@@ -1,6 +1,6 @@
 <?php
 
-namespace Alcalyn\WSSE\Security\Authentication\Token;
+namespace Alcalyn\Wsse\Security\Authentication\Token;
 
 use Symfony\Component\Security\Core\Authentication\Token\AbstractToken;
 
