@@ -35,9 +35,12 @@ class PasswordDigestValidator implements WsseTokenValidatorInterface
         $digest = $wsseToken->digest;
         $secret = $user->getPassword();
 
-        // Check created time is not in the future
-        if (strtotime($created) > time()) {
-            throw new WsseAuthenticationException('Token created date cannot be in future.');
+        // Check created time is not too far in the future (leaves 5 minutes margin)
+        if (strtotime($created) > (time() + 300)) {
+            throw new WsseAuthenticationException(sprintf(
+                'Token created date cannot be in future (%d seconds in the future).',
+                time() - strtotime($created)
+            ));
         }
 
         // Expire timestamp after 5 minutes
