@@ -44,13 +44,16 @@ class PasswordDigestValidator implements WsseTokenValidatorInterface
         }
 
         // Expire timestamp after 5 minutes
-        if (time() - strtotime($created) > 300) {
-            throw new WsseAuthenticationException('Token created date has expired.');
+        if (strtotime($created) < (time() - 300)) {
+            throw new WsseAuthenticationException(sprintf(
+                'Token created date has expired its 300 seconds of validity (%d seconds).',
+                strtotime($created) - time()
+            ));
         }
 
-        // Validate that the nonce is *not* used in the last 5 minutes
+        // Validate that the nonce is *not* used in the last 10 minutes
         // if it has, this could be a replay attack
-        if (file_exists($this->cacheDir.'/'.$nonce) && file_get_contents($this->cacheDir.'/'.$nonce) + 300 > time()) {
+        if (file_exists($this->cacheDir.'/'.$nonce) && file_get_contents($this->cacheDir.'/'.$nonce) + 600 > time()) {
             throw new NonceExpiredException('Previously used nonce detected.');
         }
         // If cache directory does not exist we create it
